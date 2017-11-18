@@ -1,0 +1,268 @@
+2017-11-18 09:39:18.5241 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 09:39:18.5672 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 09:39:18.5672 notauth:: Info Web Server Running... 
+2017-11-18 09:39:18.5832 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 09:39:18.5832 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 09:39:18.6063 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 09:39:18.6063 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 09:39:18.6113 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 09:39:18.6113 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 09:39:18.6113 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 09:41:08.6872 notauth:: Info Request Received 
+2017-11-18 09:41:08.6973 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 09:41:08.6973 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 09:41:12.9265 notauth:: Info Executing Flow for data-source-1510978193668 
+2017-11-18 09:41:12.9265 notauth:: Info First time meta data received data-source-1510978193668 
+2017-11-18 09:41:12.9265 notauth:: Info Adding fresh Metadata id data-source-1510978193668 to Manager 
+2017-11-18 09:41:12.9406 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 09:41:12.9947 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 09:41:22.4800 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 09:41:25.0442 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 09:41:25.0442 notauth:: Info Processing Meta Structure Request 
+2017-11-18 09:41:28.1426 notauth:: Info Getting column meta information 
+2017-11-18 09:41:28.5341 notauth:: Info Getting file connection string 
+2017-11-18 09:49:52.2648 notauth:: Info Request Received 
+2017-11-18 09:49:52.2708 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 09:49:52.2708 notauth:: Info Stopping the Server 
+2017-11-18 09:49:52.2648 notauth:: Error System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ItantProcessor.ExcelProcessor.SendData(String strFileName, String strRequestType, String& strAdditionalData, NameValueCollection QueryStringParameters, NameValueCollection RequestHeaders) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 45
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 261
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70
+---> (Inner Exception #0) System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253<---
+ System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ItantProcessor.ExcelProcessor.SendData(String strFileName, String strRequestType, String& strAdditionalData, NameValueCollection QueryStringParameters, NameValueCollection RequestHeaders) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 45
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 261
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70
+---> (Inner Exception #0) System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253<---
+
+2017-11-18 09:49:52.2708 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 09:49:52.2958 notauth:: Info Executing Flow for data-source-1510978193668 
+2017-11-18 09:49:52.3059 notauth:: Info First time meta data received data-source-1510978193668 
+2017-11-18 09:49:52.3059 notauth:: Info Refreshing existing Metadata id data-source-1510978193668 
+2017-11-18 09:49:52.3059 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 09:49:52.3149 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 09:49:52.3149 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 09:49:52.3500 notauth:: Info Processing Meta Structure Request 
+2017-11-18 09:49:52.3500 notauth:: Info Getting column meta information 
+2017-11-18 09:49:52.3500 notauth:: Info Getting file connection string 
+2017-11-18 09:57:14.0619 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 09:57:14.1110 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 09:57:14.1210 notauth:: Info Web Server Running... 
+2017-11-18 09:57:14.1210 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 09:57:14.1210 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 09:57:14.1430 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 09:57:14.2885 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 09:57:14.2924 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 09:57:14.2924 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 09:57:14.2924 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 09:57:14.2924 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 09:57:14.3105 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:09:51.9870 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 10:09:52.0472 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 10:09:52.0602 notauth:: Info Web Server Running... 
+2017-11-18 10:09:52.0602 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 10:09:52.0733 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:09:52.0883 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:09:52.2457 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 10:09:52.2457 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 10:09:52.2457 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 10:09:52.2648 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 10:09:52.2648 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:09:52.2778 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:18:16.8511 notauth:: Info Stopping the Server 
+2017-11-18 10:19:19.2687 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 10:19:19.3048 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 10:19:19.3139 notauth:: Info Web Server Running... 
+2017-11-18 10:19:19.3139 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 10:19:19.3259 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:19:19.3259 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:19:19.4663 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 10:19:19.4663 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 10:19:19.4663 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 10:19:19.4823 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 10:19:19.4823 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:19:19.4823 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:21:21.6612 notauth:: Info Request Received 
+2017-11-18 10:21:21.6813 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 10:21:21.6893 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 10:21:26.0525 notauth:: Info Executing Flow for data-source-1510980603516 
+2017-11-18 10:21:26.0525 notauth:: Info First time meta data received data-source-1510980603516 
+2017-11-18 10:21:26.0635 notauth:: Info Adding fresh Metadata id data-source-1510980603516 to Manager 
+2017-11-18 10:21:26.0735 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:21:26.1026 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 10:21:27.4335 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 10:21:27.5309 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:21:27.5309 notauth:: Info Processing Meta Structure Request 
+2017-11-18 10:22:28.9044 notauth:: Info Getting column meta information 
+2017-11-18 10:22:33.1725 notauth:: Info Getting file connection string 
+2017-11-18 10:23:27.1023 notauth:: Error System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ItantProcessor.ExcelProcessor.SendData(String strFileName, String strRequestType, String& strAdditionalData, NameValueCollection QueryStringParameters, NameValueCollection RequestHeaders) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 45
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 261
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70
+---> (Inner Exception #0) System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253<---
+ System.AggregateException: One or more errors occurred. ---> System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at ItantProcessor.ExcelProcessor.SendData(String strFileName, String strRequestType, String& strAdditionalData, NameValueCollection QueryStringParameters, NameValueCollection RequestHeaders) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 45
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 261
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70
+---> (Inner Exception #0) System.InvalidOperationException: The 'Microsoft.ACE.OLEDB.12.0' provider is not registered on the local machine.
+   at System.Data.OleDb.OleDbServicesWrapper.GetDataSource(OleDbConnectionString constr, DataSourceWrapper& datasrcWrapper)
+   at System.Data.OleDb.OleDbConnectionInternal..ctor(OleDbConnectionString constr, OleDbConnection connection)
+   at System.Data.OleDb.OleDbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreateNonPooledConnection(DbConnection owningConnection, DbConnectionPoolGroup poolGroup, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionInternal.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.OleDb.OleDbConnection.Open()
+   at System.Data.Common.DbConnection.OpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at ItantProcessor.ExcelProcessor.<ReadFirstRow>d__7.MoveNext() in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\ExcelProcessor.cs:line 253<---
+
+2017-11-18 10:26:39.6658 notauth:: Info System.Net.HttpListenerException (0x80004005): An operation was attempted on a nonexistent network connection
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at ItantProcessor.CItantaFileManagerRqstProcessor.<Run>b__5_1(Object c) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CItantaFileManagerRqstProcessor.cs:line 78 
+2017-11-18 10:26:44.8105 notauth:: Info Stopping the Server 

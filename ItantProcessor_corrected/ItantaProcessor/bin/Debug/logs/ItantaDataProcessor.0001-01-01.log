@@ -1,0 +1,1619 @@
+2017-11-18 10:51:27.4542 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 10:51:27.5032 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 10:51:27.5122 notauth:: Info Web Server Running... 
+2017-11-18 10:51:27.5122 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 10:51:27.5122 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:51:27.5122 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 10:51:27.5122 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 10:51:27.5293 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 10:51:27.5293 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 10:51:27.5293 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:52:22.4606 notauth:: Info Request Received 
+2017-11-18 10:52:22.4696 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 10:52:22.4696 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 10:52:26.4255 notauth:: Info Executing Flow for data-source-1510982510807 
+2017-11-18 10:52:28.0067 notauth:: Info First time meta data received data-source-1510982510807 
+2017-11-18 10:52:28.0128 notauth:: Info Adding fresh Metadata id data-source-1510982510807 to Manager 
+2017-11-18 10:52:28.0128 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:52:28.1231 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 10:52:31.3926 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 10:52:31.4788 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:52:31.4788 notauth:: Info Processing Meta Structure Request 
+2017-11-18 10:52:32.7544 notauth:: Info Getting column meta information 
+2017-11-18 10:52:33.4172 notauth:: Info Getting file connection string 
+2017-11-18 10:52:34.4093 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.4093 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.4603 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:52:34.4603 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:52:34.5032 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.5032 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.5553 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:52:34.5583 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:52:34.6005 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.6005 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.6225 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.6225 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.6396 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.6396 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.6566 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.6566 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.6743 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.6743 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.6924 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:52:34.6924 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:52:34.7084 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.7084 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.7253 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.7253 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.7433 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.7433 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.7604 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.7604 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.7794 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:52:34.7794 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:52:34.7976 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.7976 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.8146 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.8146 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.8317 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:52:34.8317 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:52:34.8811 notauth:: Info Column Info generated for Request Id: data-source-1510982510807 
+2017-11-18 10:52:35.0074 notauth:: Info Getting Column info JSON 
+2017-11-18 10:52:37.0565 notauth:: Info Request Received 
+2017-11-18 10:52:37.0625 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 10:52:37.0625 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 10:52:41.2508 notauth:: Info Executing Flow for data-source-1510982510807 
+2017-11-18 10:52:42.8393 notauth:: Info Found MetaData for Id data-source-1510982510807, Now Upgrading it 
+2017-11-18 10:52:42.8393 notauth:: Info Refreshing existing Metadata id data-source-1510982510807 
+2017-11-18 10:52:42.8393 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:52:42.9396 notauth:: Info Successfully Added new metadata for id: data-source-1510982510807 
+2017-11-18 10:52:42.9396 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 10:53:00.3801 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:01.7089 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:01.7089 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 10:53:46.1306 notauth:: Info Stopping the Server 
+2017-11-18 10:53:57.0729 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 10:53:57.1230 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 10:53:57.1230 notauth:: Info Web Server Running... 
+2017-11-18 10:53:57.1411 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 10:53:57.1411 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:53:57.1571 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:53:57.4399 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 10:53:57.4399 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:57.4479 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:57.4479 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 10:53:57.4479 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 10:53:57.4479 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 10:53:57.4870 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 10:53:57.4870 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 10:53:57.4960 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 10:53:57.4960 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 10:53:57.4960 notauth:: Info Successfully Added new metadata for id: data-source-1510982510807 
+2017-11-18 10:53:57.4960 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 10:53:57.5111 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:57.5111 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:53:57.5111 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 10:54:25.1960 notauth:: Info Request Received 
+2017-11-18 10:54:25.1990 notauth:: Info The Raw URL received /filemanager/DeleteMetaData 
+2017-11-18 10:54:25.1990 notauth:: Info Recevied request DeleteMetaData 
+2017-11-18 10:54:27.5102 notauth:: Info Executing Flow for data-source-1510982510807 
+2017-11-18 10:54:28.1010 notauth:: Info Deleting Metadata for id data-source-1510982510807 
+2017-11-18 10:54:28.1101 notauth:: Debug Removing Metadata for data-source-1510982510807 
+2017-11-18 10:54:28.1271 notauth:: Info Successfully deleted metadata for id: data-source-1510982510807 
+2017-11-18 10:54:28.1401 notauth:: Info Removing Metadata id data-source-1510982510807 
+2017-11-18 10:54:28.1401 notauth:: Info Removed Metadata id data-source-1510982510807 
+2017-11-18 10:54:28.1401 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:55:04.2102 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 10:55:04.2483 notauth:: Info File Monitor Service : 11/18/2017 10:55:04 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Created  
+2017-11-18 10:55:04.2483 notauth:: Info File Monitor Service : 11/18/2017 10:55:04 AM: File is still being copied 
+2017-11-18 10:55:17.0806 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 10:55:17.0806 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 10:55:29.0806 notauth:: Info Request Received 
+2017-11-18 10:55:29.0806 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 10:55:29.0906 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 10:55:33.6987 notauth:: Info Executing Flow for data-source-1510982679796 
+2017-11-18 10:55:34.6948 notauth:: Info First time meta data received data-source-1510982679796 
+2017-11-18 10:55:34.7079 notauth:: Info Adding fresh Metadata id data-source-1510982679796 to Manager 
+2017-11-18 10:55:34.7079 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:55:34.7289 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 10:55:35.5820 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 10:55:35.5970 notauth:: Info File Monitor Service : 11/18/2017 10:55:35 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Deleted 
+2017-11-18 10:55:35.6843 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:55:35.6843 notauth:: Info Processing Meta Structure Request 
+2017-11-18 10:55:36.8550 notauth:: Info Getting column meta information 
+2017-11-18 10:55:37.3794 notauth:: Info Getting file connection string 
+2017-11-18 10:55:38.5139 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.5139 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.5535 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:55:38.5616 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:55:38.5946 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.5946 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.6269 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:55:38.6269 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:55:38.6570 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.6570 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.6915 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.6915 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.7105 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.7105 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.7305 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.7305 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.7490 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.7490 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.7699 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:55:38.7699 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:55:38.7900 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.7900 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.8096 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.8096 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.8286 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.8286 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.8484 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.8484 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.8714 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 10:55:38.8714 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 10:55:38.8903 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.8903 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.9122 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.9122 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.9322 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 10:55:38.9322 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 10:55:38.9812 notauth:: Info Column Info generated for Request Id: data-source-1510982679796 
+2017-11-18 10:55:39.0243 notauth:: Info Getting Column info JSON 
+2017-11-18 10:55:41.4901 notauth:: Info Request Received 
+2017-11-18 10:55:41.5002 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 10:55:41.5002 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 10:55:45.1303 notauth:: Info Executing Flow for data-source-1510982679796 
+2017-11-18 10:55:55.0245 notauth:: Info Found MetaData for Id data-source-1510982679796, Now Upgrading it 
+2017-11-18 10:55:55.0265 notauth:: Info Refreshing existing Metadata id data-source-1510982679796 
+2017-11-18 10:55:55.0265 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 10:55:55.1217 notauth:: Info Successfully Added new metadata for id: data-source-1510982679796 
+2017-11-18 10:55:55.1217 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 10:56:02.8061 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:56:04.9774 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 10:56:41.7180 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 11:12:48.1752 notauth:: Info Stopping the Server 
+2017-11-18 11:13:54.7723 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:13:54.8314 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:13:54.8415 notauth:: Info Web Server Running... 
+2017-11-18 11:13:54.8415 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:13:54.8415 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:13:54.8615 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:13:55.1263 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:13:55.1263 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:13:55.1263 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:13:55.1383 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:13:55.1383 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:13:55.1383 notauth:: Info Moving File D:\personal\Itanta\staging\Test-202.xls to Staging 
+2017-11-18 11:13:55.1673 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:13:55.1673 notauth:: Info Processing Data Request 
+2017-11-18 11:13:55.1673 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:13:55.5033 notauth:: Info Loading column info for already processed id data-source-1510982679796 
+2017-11-18 11:13:55.5714 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:13:55.6045 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:13:55.6045 notauth:: Info Getting file connection string 
+2017-11-18 11:13:55.7178 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:13:55.7850 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:13:56.9271 notauth:: Debug RunTime 00:00:01.32 
+2017-11-18 11:13:56.9271 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:13:56.9351 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:13:56.9351 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:13:56.9351 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:13:56.9351 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:13:56.9351 notauth:: Info Successfully Added new metadata for id: data-source-1510982679796 
+2017-11-18 11:13:56.9482 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:14:28.3476 notauth:: Info Request Received 
+2017-11-18 11:14:28.3617 notauth:: Info The Raw URL received /filemanager/DeleteMetaData 
+2017-11-18 11:14:28.3617 notauth:: Info Recevied request DeleteMetaData 
+2017-11-18 11:14:32.0993 notauth:: Info Executing Flow for data-source-1510982679796 
+2017-11-18 11:14:32.6876 notauth:: Info Deleting Metadata for id data-source-1510982679796 
+2017-11-18 11:14:32.6876 notauth:: Debug Removing Metadata for data-source-1510982679796 
+2017-11-18 11:14:32.7046 notauth:: Info Successfully deleted metadata for id: data-source-1510982679796 
+2017-11-18 11:14:32.7187 notauth:: Info Removing Metadata id data-source-1510982679796 
+2017-11-18 11:14:32.7318 notauth:: Info Removed Metadata id data-source-1510982679796 
+2017-11-18 11:14:32.7318 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:15:06.0586 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:15:06.0586 notauth:: Info File Monitor Service : 11/18/2017 11:15:06 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Created  
+2017-11-18 11:15:06.0586 notauth:: Info File Monitor Service : 11/18/2017 11:15:06 AM: File is still being copied 
+2017-11-18 11:15:09.1847 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:15:09.1847 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 11:15:09.2048 notauth:: Info File Monitor Service : 11/18/2017 11:15:09 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Changed 
+2017-11-18 11:15:09.2178 notauth:: Info File Monitor Service : 11/18/2017 11:15:09 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Changed 
+2017-11-18 11:15:21.8490 notauth:: Info Request Received 
+2017-11-18 11:15:21.8490 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:15:21.8540 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:15:26.9461 notauth:: Info Executing Flow for data-source-1510983912659 
+2017-11-18 11:15:27.8120 notauth:: Info First time meta data received data-source-1510983912659 
+2017-11-18 11:15:27.8280 notauth:: Info Adding fresh Metadata id data-source-1510983912659 to Manager 
+2017-11-18 11:15:27.8421 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:15:27.8591 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:15:28.5903 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:15:28.6043 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:15:28.6043 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:15:28.6043 notauth:: Info File Monitor Service : 11/18/2017 11:15:28 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Deleted 
+2017-11-18 11:15:29.6771 notauth:: Info Getting column meta information 
+2017-11-18 11:15:30.5354 notauth:: Info Getting file connection string 
+2017-11-18 11:15:31.4558 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.4558 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.5018 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:15:31.5018 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:15:31.5460 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.5460 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.5821 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:15:31.5821 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:15:31.6212 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.6212 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.6593 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.6593 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.6924 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.6924 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.7264 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.7264 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.7592 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.7601 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.7952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:15:31.7952 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:15:31.8283 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.8283 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.8614 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.8614 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.8965 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.8965 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.9296 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:31.9296 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:31.9660 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:15:31.9660 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:15:32.0000 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:32.0000 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:32.0351 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:32.0351 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:32.0742 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:15:32.0742 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:15:32.1148 notauth:: Info Column Info generated for Request Id: data-source-1510983912659 
+2017-11-18 11:15:32.1830 notauth:: Info Getting Column info JSON 
+2017-11-18 11:15:39.4642 notauth:: Info Request Received 
+2017-11-18 11:15:39.4642 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:15:39.4642 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:15:43.1796 notauth:: Info Executing Flow for data-source-1510983912659 
+2017-11-18 11:15:44.2343 notauth:: Info Found MetaData for Id data-source-1510983912659, Now Upgrading it 
+2017-11-18 11:15:44.2343 notauth:: Info Refreshing existing Metadata id data-source-1510983912659 
+2017-11-18 11:15:44.2543 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:15:44.3265 notauth:: Info Successfully Added new metadata for id: data-source-1510983912659 
+2017-11-18 11:15:44.3265 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:15:52.4052 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:15:54.1909 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:16:45.7337 notauth:: Info Moving File D:\personal\Itanta\staging\Test-202.xls to Staging 
+2017-11-18 11:16:45.7447 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:16:45.7447 notauth:: Info Processing Data Request 
+2017-11-18 11:16:45.7447 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:16:45.7637 notauth:: Info Loading column info for already processed id data-source-1510983912659 
+2017-11-18 11:16:45.7637 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:16:45.7637 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:16:45.7637 notauth:: Info Getting file connection string 
+2017-11-18 11:16:45.8670 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:16:45.9061 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:16:46.9699 notauth:: Debug RunTime 00:00:01.19 
+2017-11-18 11:16:46.9699 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:17:17.2926 notauth:: Info Stopping the Server 
+2017-11-18 11:17:48.7870 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:17:48.8372 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:17:48.8472 notauth:: Info Web Server Running... 
+2017-11-18 11:17:48.8472 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:17:48.8572 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:17:48.8572 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:17:49.1309 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:17:49.1601 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:17:49.1601 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:17:49.1761 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:17:49.1821 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:17:49.1821 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:17:49.1981 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:17:49.1981 notauth:: Info Successfully Added new metadata for id: data-source-1510983912659 
+2017-11-18 11:17:49.2152 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:18:17.3092 notauth:: Info Request Received 
+2017-11-18 11:18:17.3283 notauth:: Info The Raw URL received /filemanager/DeleteMetaData 
+2017-11-18 11:18:17.3283 notauth:: Info Recevied request DeleteMetaData 
+2017-11-18 11:18:19.6998 notauth:: Info Executing Flow for data-source-1510983912659 
+2017-11-18 11:18:20.2925 notauth:: Info Deleting Metadata for id data-source-1510983912659 
+2017-11-18 11:18:20.2925 notauth:: Debug Removing Metadata for data-source-1510983912659 
+2017-11-18 11:18:20.2925 notauth:: Info Successfully deleted metadata for id: data-source-1510983912659 
+2017-11-18 11:18:20.3126 notauth:: Info Removing Metadata id data-source-1510983912659 
+2017-11-18 11:18:20.3126 notauth:: Info Removed Metadata id data-source-1510983912659 
+2017-11-18 11:18:20.3126 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:18:51.0388 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:18:51.0519 notauth:: Info File Monitor Service : 11/18/2017 11:18:51 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Created  
+2017-11-18 11:18:51.0519 notauth:: Info File Monitor Service : 11/18/2017 11:18:51 AM: File is still being copied 
+2017-11-18 11:18:54.4711 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:18:54.4801 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 11:18:54.4801 notauth:: Info File Monitor Service : 11/18/2017 11:18:54 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Changed 
+2017-11-18 11:18:54.4801 notauth:: Info File Monitor Service : 11/18/2017 11:18:54 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Changed 
+2017-11-18 11:19:14.8556 notauth:: Info Request Received 
+2017-11-18 11:19:14.8556 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:19:14.8556 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:19:33.5425 notauth:: Info Executing Flow for data-source-1510984104085 
+2017-11-18 11:19:44.3560 notauth:: Info First time meta data received data-source-1510984104085 
+2017-11-18 11:19:44.3560 notauth:: Info Adding fresh Metadata id data-source-1510984104085 to Manager 
+2017-11-18 11:19:44.3751 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:19:44.3911 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:19:46.3925 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:19:46.4095 notauth:: Info File Monitor Service : 11/18/2017 11:19:46 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Deleted 
+2017-11-18 11:19:46.5028 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:19:46.5028 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:19:47.5623 notauth:: Info Getting column meta information 
+2017-11-18 11:19:48.5918 notauth:: Info Getting file connection string 
+2017-11-18 11:19:57.5053 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.5053 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.5565 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:19:57.5665 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:19:57.6082 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.6082 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.6501 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:19:57.6521 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:19:57.6981 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.6981 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.7453 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.7453 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.7854 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.7854 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.8245 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.8245 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.8636 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.8636 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.9047 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:19:57.9047 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:19:57.9308 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.9308 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.9578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.9578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:57.9839 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:57.9839 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:58.0090 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:58.0100 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:58.0360 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:19:58.0360 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:19:58.0611 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:58.0611 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:58.0892 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:58.0892 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:58.1153 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:19:58.1153 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:19:58.1725 notauth:: Info Column Info generated for Request Id: data-source-1510984104085 
+2017-11-18 11:19:58.2275 notauth:: Info Getting Column info JSON 
+2017-11-18 11:20:02.5970 notauth:: Info Request Received 
+2017-11-18 11:20:02.6211 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:20:02.6211 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:20:08.2187 notauth:: Info Executing Flow for data-source-1510984104085 
+2017-11-18 11:20:12.8844 notauth:: Info Found MetaData for Id data-source-1510984104085, Now Upgrading it 
+2017-11-18 11:20:12.8995 notauth:: Info Refreshing existing Metadata id data-source-1510984104085 
+2017-11-18 11:20:12.9095 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:20:12.9907 notauth:: Info Successfully Added new metadata for id: data-source-1510984104085 
+2017-11-18 11:20:12.9907 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:20:24.0102 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:20:28.1810 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:20:52.7749 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:20:52.7779 notauth:: Info Processing Data Request 
+2017-11-18 11:20:52.8040 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:20:53.1972 notauth:: Info Loading column info for already processed id data-source-1510984104085 
+2017-11-18 11:20:53.2138 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:20:53.2448 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:20:53.3995 notauth:: Info Getting file connection string 
+2017-11-18 11:21:06.5746 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:21:06.6386 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:22:02.5649 notauth:: Info Request Received 
+2017-11-18 11:22:02.6012 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:22:02.6241 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:22:07.7146 notauth:: Info Executing Flow for data-source-1510984104085 
+2017-11-18 11:22:08.6753 notauth:: Info Found MetaData for Id data-source-1510984104085, Now Upgrading it 
+2017-11-18 11:22:08.7335 notauth:: Info Refreshing existing Metadata id data-source-1510984104085 
+2017-11-18 11:22:08.7626 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:23:34.3157 notauth:: Info Stopping the Server 
+2017-11-18 11:30:53.4922 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:30:53.5433 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:30:53.5433 notauth:: Info Web Server Running... 
+2017-11-18 11:30:53.5604 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:30:53.5604 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:30:53.5734 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:30:53.8431 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:30:53.8431 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:30:53.8431 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:30:53.8572 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:30:53.8572 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:30:53.8792 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:30:53.8792 notauth:: Info Processing Data Request 
+2017-11-18 11:30:53.8852 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:30:54.2171 notauth:: Info Loading column info for already processed id data-source-1510984104085 
+2017-11-18 11:30:54.2552 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:30:54.2733 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:30:54.2773 notauth:: Info Getting file connection string 
+2017-11-18 11:30:54.3858 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:30:54.4309 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:30:55.4326 notauth:: Debug RunTime 00:00:01.16 
+2017-11-18 11:30:55.4326 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:30:55.4326 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:30:55.4326 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:30:55.4497 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:30:55.4497 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:30:55.4497 notauth:: Info Successfully Added new metadata for id: data-source-1510984104085 
+2017-11-18 11:30:55.4497 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:31:28.0304 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:31:28.0304 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:31:28.0304 notauth:: Info File Monitor Service : 11/18/2017 11:31:28 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Created  
+2017-11-18 11:31:28.0415 notauth:: Info File Monitor Service : 11/18/2017 11:31:28 AM: File is still being copied 
+2017-11-18 11:31:28.0304 notauth:: Info File Monitor Service : 11/18/2017 11:31:28 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Created  
+2017-11-18 11:31:28.0415 notauth:: Info File Monitor Service : 11/18/2017 11:31:28 AM: File is still being copied 
+2017-11-18 11:31:29.0487 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:31:29.0487 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:31:29.0487 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:31:29.0487 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:31:29.0627 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:31:29.0627 notauth:: Info Processing Data Request 
+2017-11-18 11:31:29.0627 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:31:29.0747 notauth:: Info Loading column info for already processed id data-source-1510984104085 
+2017-11-18 11:31:29.0747 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:31:29.0747 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:31:29.0747 notauth:: Info Getting file connection string 
+2017-11-18 11:31:29.2402 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:31:29.2833 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:33:04.3217 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:33:04.3719 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:33:04.3719 notauth:: Info Web Server Running... 
+2017-11-18 11:33:04.3886 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:33:04.3886 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:33:04.3886 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:33:04.6593 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:33:04.6593 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:33:04.6674 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:33:04.6674 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:33:04.6674 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:33:04.6935 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:33:04.6935 notauth:: Info Processing Data Request 
+2017-11-18 11:33:04.6995 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:33:04.9445 notauth:: Info Loading column info for already processed id data-source-1510984104085 
+2017-11-18 11:33:05.0007 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:33:05.0328 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:33:05.0328 notauth:: Info Getting file connection string 
+2017-11-18 11:33:05.1591 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:33:05.2263 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:33:06.1527 notauth:: Debug RunTime 00:00:01.12 
+2017-11-18 11:33:06.1527 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:33:06.1527 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:33:06.1527 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:33:06.1678 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:33:06.1678 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:33:06.1678 notauth:: Info Successfully Added new metadata for id: data-source-1510984104085 
+2017-11-18 11:33:06.1678 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:33:57.1588 notauth:: Info Request Received 
+2017-11-18 11:33:57.1588 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:33:57.1678 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:33:59.6193 notauth:: Info Executing Flow for data-source-1510985015769 
+2017-11-18 11:34:00.1861 notauth:: Info First time meta data received data-source-1510985015769 
+2017-11-18 11:34:00.1861 notauth:: Info Adding fresh Metadata id data-source-1510985015769 to Manager 
+2017-11-18 11:34:00.2062 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:34:00.3666 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:34:01.1005 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:34:01.1125 notauth:: Info File Monitor Service : 11/18/2017 11:34:01 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Deleted 
+2017-11-18 11:34:01.1125 notauth:: Info File Monitor Service : 11/18/2017 11:34:01 AM: File D:\personal\Itanta\ExcelData\Test-202.xls | Deleted 
+2017-11-18 11:34:01.1225 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:34:01.1486 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:34:01.7181 notauth:: Info Getting column meta information 
+2017-11-18 11:34:02.3361 notauth:: Info Getting file connection string 
+2017-11-18 11:34:02.4334 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.4334 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.4775 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:34:02.4835 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:34:02.5033 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.5033 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.5233 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:34:02.5233 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:34:02.5454 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.5454 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.5684 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.5684 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.5875 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.5885 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.5885 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.6045 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.6206 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.6206 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.6386 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:34:02.6386 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:34:02.6567 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.6567 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.6747 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.6747 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.6908 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.6908 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.7088 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.7088 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.7263 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:34:02.7263 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:34:02.7423 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.7423 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.7603 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.7603 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.7814 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:34:02.7814 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:34:02.8175 notauth:: Info Column Info generated for Request Id: data-source-1510985015769 
+2017-11-18 11:34:02.8490 notauth:: Info Getting Column info JSON 
+2017-11-18 11:34:05.7994 notauth:: Info Request Received 
+2017-11-18 11:34:05.7994 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:34:05.7994 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:34:09.6175 notauth:: Info Executing Flow for data-source-1510985015769 
+2017-11-18 11:34:10.5682 notauth:: Info Found MetaData for Id data-source-1510985015769, Now Upgrading it 
+2017-11-18 11:34:10.5732 notauth:: Info Refreshing existing Metadata id data-source-1510985015769 
+2017-11-18 11:34:10.5882 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:36:18.5007 notauth:: Info Stopping the Server 
+2017-11-18 11:38:05.7699 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:38:05.8190 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:38:05.8293 notauth:: Info Web Server Running... 
+2017-11-18 11:38:05.8293 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:38:05.8403 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:38:05.8403 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:38:05.8403 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:38:05.8403 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:38:05.8403 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:38:05.8403 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:38:26.4737 notauth:: Info Request Received 
+2017-11-18 11:38:26.4837 notauth:: Info The Raw URL received /filemanager/DeleteMetaData 
+2017-11-18 11:38:26.4837 notauth:: Info Recevied request DeleteMetaData 
+2017-11-18 11:38:29.4501 notauth:: Info Executing Flow for data-source-1510985015769 
+2017-11-18 11:38:30.0290 notauth:: Info Deleting Metadata for id data-source-1510985015769 
+2017-11-18 11:38:30.0460 notauth:: Debug Removing Metadata for data-source-1510985015769 
+2017-11-18 11:38:30.0580 notauth:: Info Removing Metadata id data-source-1510985015769 
+2017-11-18 11:39:12.4704 notauth:: Info Request Received 
+2017-11-18 11:39:12.4875 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:39:12.4945 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:39:15.3103 notauth:: Info Executing Flow for data-source-1510985319285 
+2017-11-18 11:39:15.8836 notauth:: Info First time meta data received data-source-1510985319285 
+2017-11-18 11:39:15.8886 notauth:: Info Adding fresh Metadata id data-source-1510985319285 to Manager 
+2017-11-18 11:39:15.9067 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:39:15.9849 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:39:16.7060 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:39:16.7451 notauth:: Error System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at ItantProcessor.InputWatcher.MoveToStaging(String strFileName) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 291
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 262
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70 System.IO.IOException: Cannot create a file when that file already exists.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
+   at ItantProcessor.InputWatcher.MoveToStaging(String strFileName) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 291
+   at ItantProcessor.InputWatcher.ProcessMetaDataRequest(UserMetaData objMetadata, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\InputWatcher.cs:line 262
+   at DataManager.CExcelDataProcessor.GenerateMetaData(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 19
+   at DataManager.CExcelDataProcessor.HandleRequest(UserMetaData objMetaData, String& strOutData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 61
+   at DataManager.CExcelDataProcessor.GetResponse(UserMetaData objMetaData) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CExcelDataProcessor.cs:line 25
+   at DataManager.CDataManager.ProcessRequest(String strMetaDataJSON, String& strResponse) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataManager.cs:line 70
+2017-11-18 11:41:20.2162 notauth:: Info Stopping the Server 
+2017-11-18 11:42:53.8430 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:42:53.8920 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:42:53.9007 notauth:: Info Web Server Running... 
+2017-11-18 11:42:53.9007 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:42:53.9007 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:42:53.9188 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:42:54.0882 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:42:54.0882 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:42:54.0882 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:42:54.0882 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:42:54.1062 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:42:54.1062 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:43:32.9643 notauth:: Info Request Received 
+2017-11-18 11:43:32.9643 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:43:32.9643 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:43:35.3059 notauth:: Info Executing Flow for data-source-1510985319285 
+2017-11-18 11:43:35.9096 notauth:: Info First time meta data received data-source-1510985319285 
+2017-11-18 11:43:35.9096 notauth:: Info Adding fresh Metadata id data-source-1510985319285 to Manager 
+2017-11-18 11:43:35.9317 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:43:35.9838 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:43:36.5494 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:43:36.6015 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:43:36.6075 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:43:37.1137 notauth:: Info Getting column meta information 
+2017-11-18 11:43:37.6761 notauth:: Info Getting file connection string 
+2017-11-18 11:43:37.9524 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:37.9524 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:37.9965 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:43:37.9965 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:43:38.0316 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.0316 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.0607 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:43:38.0607 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:43:38.0877 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.0887 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.1148 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.1148 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.1447 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.1447 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.1719 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.1719 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.2023 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.2023 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.2344 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:43:38.2344 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:43:38.2616 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.2616 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.2887 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.2887 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.3177 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.3177 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.3468 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.3468 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.3756 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:43:38.3756 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:43:38.4042 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.4042 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.4312 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.4323 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.4580 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:43:38.4580 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:43:38.5321 notauth:: Info Column Info generated for Request Id: data-source-1510985319285 
+2017-11-18 11:43:38.6050 notauth:: Info Getting Column info JSON 
+2017-11-18 11:43:52.9163 notauth:: Info Request Received 
+2017-11-18 11:43:52.9163 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:43:52.9163 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:43:56.1621 notauth:: Info Executing Flow for data-source-1510985319285 
+2017-11-18 11:43:57.8103 notauth:: Info Found MetaData for Id data-source-1510985319285, Now Upgrading it 
+2017-11-18 11:43:57.8103 notauth:: Info Refreshing existing Metadata id data-source-1510985319285 
+2017-11-18 11:43:57.8294 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:43:57.9338 notauth:: Info Successfully Added new metadata for id: data-source-1510985319285 
+2017-11-18 11:43:57.9338 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:43:59.5578 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:44:00.6700 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:44:03.1366 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:44:03.1526 notauth:: Info Processing Data Request 
+2017-11-18 11:44:03.1917 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:44:03.5350 notauth:: Info Loading column info for already processed id data-source-1510985319285 
+2017-11-18 11:44:03.5751 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:44:03.6203 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:44:05.6614 notauth:: Info Getting file connection string 
+2017-11-18 11:44:05.7657 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:44:11.6712 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:45:52.9029 notauth:: Info Request Received 
+2017-11-18 11:45:52.9620 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:45:53.0914 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:46:29.0935 notauth:: Info Executing Flow for data-source-1510985319285 
+2017-11-18 11:46:29.7839 notauth:: Info Found MetaData for Id data-source-1510985319285, Now Upgrading it 
+2017-11-18 11:46:30.0636 notauth:: Info Refreshing existing Metadata id data-source-1510985319285 
+2017-11-18 11:46:30.2026 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:49:26.6076 notauth:: Info Stopping the Server 
+2017-11-18 11:50:04.9359 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:50:04.9849 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:50:04.9849 notauth:: Info Web Server Running... 
+2017-11-18 11:50:05.0020 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:50:05.0020 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:50:05.0140 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:50:05.3198 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:50:05.3238 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:50:05.3238 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:50:05.3238 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:50:05.3238 notauth:: Info Adding Metadata Record for further processing 
+2017-11-18 11:50:05.3549 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:50:05.3549 notauth:: Info Processing Data Request 
+2017-11-18 11:50:05.3549 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:50:05.6056 notauth:: Info Loading column info for already processed id data-source-1510985319285 
+2017-11-18 11:50:05.6427 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:50:05.6627 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:50:05.6667 notauth:: Info Getting file connection string 
+2017-11-18 11:50:05.7770 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:50:05.8171 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:50:06.8008 notauth:: Debug RunTime 00:00:01.14 
+2017-11-18 11:50:06.8008 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:50:06.8078 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:50:06.8078 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:50:06.8078 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:50:06.8078 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:50:06.8078 notauth:: Info Successfully Added new metadata for id: data-source-1510985319285 
+2017-11-18 11:50:06.8078 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:50:11.0830 notauth:: Info Stopping the Server 
+2017-11-18 11:50:35.7971 notauth:: Info Intialising the CItantaFileManagerRqstProcessor Server Responder. 
+2017-11-18 11:50:35.8462 notauth:: Info Now starting to listen for File Manager Requests 
+2017-11-18 11:50:35.8542 notauth:: Info Web Server Running... 
+2017-11-18 11:50:35.8542 notauth:: Info Watching Directory D:\personal\Itanta\metadata 
+2017-11-18 11:50:35.8542 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:50:35.8713 notauth:: Info Metadata Watcher is Initialized 
+2017-11-18 11:50:35.8713 notauth:: Info PreProcessing Files in Directory D:\personal\Itanta\metadata 
+2017-11-18 11:50:35.8713 notauth:: Info Registering Data Managers for File and Database 
+2017-11-18 11:50:35.8713 notauth:: Info Process Stale Disk Entries for File and Database 
+2017-11-18 11:50:35.8713 notauth:: Info Loading Data configuration to Disk 
+2017-11-18 11:51:12.4972 notauth:: Info Request Received 
+2017-11-18 11:51:12.4972 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:51:12.4972 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:51:12.7900 notauth:: Info Executing Flow for data-source-1510986054381 
+2017-11-18 11:51:12.7950 notauth:: Info First time meta data received data-source-1510986054381 
+2017-11-18 11:51:12.7950 notauth:: Info Adding fresh Metadata id data-source-1510986054381 to Manager 
+2017-11-18 11:51:12.8070 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:51:12.8361 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:51:12.8421 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:51:12.8682 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:51:12.8682 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:51:12.8732 notauth:: Info Getting column meta information 
+2017-11-18 11:51:12.8732 notauth:: Info Getting file connection string 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9852 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:51:12.9852 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9852 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:51:12.9852 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9852 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9852 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9852 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:51:12.9952 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:12.9952 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:51:12.9952 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:51:12.9952 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:13.0103 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:13.0103 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:13.0103 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:13.0103 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:51:13.0103 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:51:13.0553 notauth:: Info Column Info generated for Request Id: data-source-1510986054381 
+2017-11-18 11:51:13.0693 notauth:: Info Getting Column info JSON 
+2017-11-18 11:51:14.8662 notauth:: Info Request Received 
+2017-11-18 11:51:14.8662 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:51:14.8752 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:51:14.9173 notauth:: Info Executing Flow for data-source-1510986054381 
+2017-11-18 11:51:14.9173 notauth:: Info Found MetaData for Id data-source-1510986054381, Now Upgrading it 
+2017-11-18 11:51:14.9173 notauth:: Info Refreshing existing Metadata id data-source-1510986054381 
+2017-11-18 11:51:14.9173 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:51:14.9745 notauth:: Info Successfully Added new metadata for id: data-source-1510986054381 
+2017-11-18 11:51:14.9745 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:51:14.9745 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:51:14.9745 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:51:14.9805 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:51:14.9805 notauth:: Info Processing Data Request 
+2017-11-18 11:51:14.9805 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:51:15.3335 notauth:: Info Loading column info for already processed id data-source-1510986054381 
+2017-11-18 11:51:15.3655 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:51:15.3906 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:51:15.3906 notauth:: Info Getting file connection string 
+2017-11-18 11:51:15.4458 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:51:15.4808 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:51:16.4233 notauth:: Debug RunTime 00:00:01.03 
+2017-11-18 11:51:16.4233 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:51:59.2533 notauth:: Info Request Received 
+2017-11-18 11:51:59.2714 notauth:: Info The Raw URL received /filemanager/DeleteMetaData 
+2017-11-18 11:51:59.2844 notauth:: Info Recevied request DeleteMetaData 
+2017-11-18 11:51:59.3326 notauth:: Info Executing Flow for data-source-1510986054381 
+2017-11-18 11:51:59.3326 notauth:: Info Deleting Metadata for id data-source-1510986054381 
+2017-11-18 11:51:59.3386 notauth:: Debug Removing Metadata for data-source-1510986054381 
+2017-11-18 11:51:59.3586 notauth:: Info Successfully deleted metadata for id: data-source-1510986054381 
+2017-11-18 11:51:59.3586 notauth:: Info Removing Metadata id data-source-1510986054381 
+2017-11-18 11:51:59.3586 notauth:: Info Removed Metadata id data-source-1510986054381 
+2017-11-18 11:51:59.3586 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:52:55.8643 notauth:: Info Request Received 
+2017-11-18 11:52:55.8643 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 11:52:55.8643 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 11:52:55.8643 notauth:: Info Executing Flow for data-source-1510986168027 
+2017-11-18 11:52:55.8703 notauth:: Info First time meta data received data-source-1510986168027 
+2017-11-18 11:52:55.8703 notauth:: Info Adding fresh Metadata id data-source-1510986168027 to Manager 
+2017-11-18 11:52:55.8703 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:52:55.8703 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-202.xls 
+2017-11-18 11:52:55.8703 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-202.xls to Staging 
+2017-11-18 11:52:55.8703 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:52:55.8703 notauth:: Info Processing Meta Structure Request 
+2017-11-18 11:52:55.8703 notauth:: Info Getting column meta information 
+2017-11-18 11:52:55.8853 notauth:: Info Getting file connection string 
+2017-11-18 11:52:55.9134 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9134 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9134 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:52:55.9134 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9164 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:52:55.9164 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9164 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9164 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9164 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9164 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:52:55.9324 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9324 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9324 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9485 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 11:52:55.9485 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 11:52:55.9485 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9485 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9485 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9485 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9485 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 11:52:55.9485 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 11:52:55.9898 notauth:: Info Column Info generated for Request Id: data-source-1510986168027 
+2017-11-18 11:52:55.9898 notauth:: Info Getting Column info JSON 
+2017-11-18 11:52:57.6298 notauth:: Info Request Received 
+2017-11-18 11:52:57.6298 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 11:52:57.6388 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 11:52:57.6388 notauth:: Info Executing Flow for data-source-1510986168027 
+2017-11-18 11:52:57.6388 notauth:: Info Found MetaData for Id data-source-1510986168027, Now Upgrading it 
+2017-11-18 11:52:57.6388 notauth:: Info Refreshing existing Metadata id data-source-1510986168027 
+2017-11-18 11:52:57.6388 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 11:52:57.6388 notauth:: Info Successfully Added new metadata for id: data-source-1510986168027 
+2017-11-18 11:52:57.6388 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 11:52:57.6388 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:52:57.6388 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:52:57.6388 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 11:52:57.6388 notauth:: Info Processing Data Request 
+2017-11-18 11:52:57.6388 notauth:: Info Initializing connection for Collection Alarm-Test-202.xls 
+2017-11-18 11:52:57.6519 notauth:: Info Loading column info for already processed id data-source-1510986168027 
+2017-11-18 11:52:57.6519 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 11:52:57.6519 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 11:52:57.6519 notauth:: Info Getting file connection string 
+2017-11-18 11:52:57.7060 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 11:52:57.7321 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 11:52:58.5885 notauth:: Debug RunTime 00:00:00.93 
+2017-11-18 11:52:58.5885 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-202.xls 
+2017-11-18 12:02:10.6760 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:02:10.6951 notauth:: Info File Monitor Service : 11/18/2017 12:02:10 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Created  
+2017-11-18 12:02:10.7372 notauth:: Info File Monitor Service : 11/18/2017 12:02:10 PM: File is still being copied 
+2017-11-18 12:02:11.7676 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:02:11.7676 notauth:: Warn Meta data config is not present, ignoring current cycle 
+2017-11-18 12:02:11.7676 notauth:: Info File Monitor Service : 11/18/2017 12:02:11 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:02:11.7676 notauth:: Info File Monitor Service : 11/18/2017 12:02:11 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:02:35.4757 notauth:: Info Request Received 
+2017-11-18 12:02:35.4757 notauth:: Info The Raw URL received /filemanager/WriteFileMetaData 
+2017-11-18 12:02:35.4757 notauth:: Info Recevied request WriteFileMetaData 
+2017-11-18 12:02:35.4757 notauth:: Info Executing Flow for data-source-1510986742196 
+2017-11-18 12:02:35.4796 notauth:: Info First time meta data received data-source-1510986742196 
+2017-11-18 12:02:35.4796 notauth:: Info Adding fresh Metadata id data-source-1510986742196 to Manager 
+2017-11-18 12:02:35.4796 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 12:02:35.4796 notauth:: Info Processing MetaData for File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:02:35.4796 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-302.xls to Staging 
+2017-11-18 12:02:35.4796 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:02:35.4796 notauth:: Info Processing Meta Structure Request 
+2017-11-18 12:02:35.4947 notauth:: Info Getting column meta information 
+2017-11-18 12:02:35.4947 notauth:: Info Getting file connection string 
+2017-11-18 12:02:35.4796 notauth:: Info File Monitor Service : 11/18/2017 12:02:35 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Deleted 
+2017-11-18 12:02:35.5348 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5348 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5348 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 12:02:35.5348 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 12:02:35.5348 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5348 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Decimal.Parse(String s)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 67 
+2017-11-18 12:02:35.5418 notauth:: Warn Field was not converted to Number so it is text 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5418 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5418 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5418 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5418 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5418 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5418 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5578 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5578 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.5739 notauth:: Debug System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at ItantProcessor.CDataMetaStructure.GetFieldType(Object val) in D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\CDataMetaStructure.cs:line 58 
+2017-11-18 12:02:35.5739 notauth:: Warn Failed to convert to number, trying decimal 
+2017-11-18 12:02:35.6126 notauth:: Info Column Info generated for Request Id: data-source-1510986742196 
+2017-11-18 12:02:35.6126 notauth:: Info Getting Column info JSON 
+2017-11-18 12:02:37.4632 notauth:: Info Request Received 
+2017-11-18 12:02:37.4632 notauth:: Info The Raw URL received /filemanager/WriteFileColumnData 
+2017-11-18 12:02:37.4632 notauth:: Info Recevied request WriteFileColumnData 
+2017-11-18 12:02:37.4632 notauth:: Info Executing Flow for data-source-1510986742196 
+2017-11-18 12:02:37.4632 notauth:: Info Found MetaData for Id data-source-1510986742196, Now Upgrading it 
+2017-11-18 12:02:37.4632 notauth:: Info Refreshing existing Metadata id data-source-1510986742196 
+2017-11-18 12:02:37.4632 notauth:: Info Writing Data configuration to Disk 
+2017-11-18 12:02:37.4632 notauth:: Info Successfully Added new metadata for id: data-source-1510986742196 
+2017-11-18 12:02:37.4632 notauth:: Info Watching Directory D:\personal\Itanta\ExcelData 
+2017-11-18 12:02:37.4632 notauth:: Info Processing Existing file D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:02:37.4632 notauth:: Info Processing Data for File D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:02:37.4632 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:02:37.4632 notauth:: Info Processing Data Request 
+2017-11-18 12:02:37.4793 notauth:: Info Initializing connection for Collection Batch-Test-302.xls 
+2017-11-18 12:02:37.4793 notauth:: Info Loading column info for already processed id data-source-1510986742196 
+2017-11-18 12:02:37.4793 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 12:02:37.4793 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 12:02:37.4793 notauth:: Info Getting file connection string 
+2017-11-18 12:02:37.5294 notauth:: Warn Number of Empty Rows ignored 2 
+2017-11-18 12:02:37.5625 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 12:02:38.1577 notauth:: Debug RunTime 00:00:00.67 
+2017-11-18 12:02:38.1577 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:08:38.5302 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:08:38.5302 notauth:: Info File Monitor Service : 11/18/2017 12:08:38 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Created  
+2017-11-18 12:08:38.5302 notauth:: Info Proceeding with Processing of File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:08:38.5462 notauth:: Info File Monitor Service : 11/18/2017 12:08:38 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Created  
+2017-11-18 12:08:38.5883 notauth:: Info File Monitor Service : 11/18/2017 12:08:38 PM: File is still being copied 
+2017-11-18 12:08:38.5462 notauth:: Info File Monitor Service : 11/18/2017 12:08:38 PM: File is still being copied 
+2017-11-18 12:08:39.5940 notauth:: Info Processing Data for File D:\personal\Itanta\ExcelData\Test-302.xls 
+2017-11-18 12:08:39.5940 notauth:: Info Moving File D:\personal\Itanta\ExcelData\Test-302.xls to Staging 
+2017-11-18 12:08:39.5940 notauth:: Info Processing data for File D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:08:39.5940 notauth:: Info Processing Data Request 
+2017-11-18 12:08:39.6061 notauth:: Info Initializing connection for Collection Batch-Test-302.xls 
+2017-11-18 12:08:39.6061 notauth:: Info Loading column info for already processed id data-source-1510986742196 
+2017-11-18 12:08:39.6061 notauth:: Info Starting to serialize data to output sink 
+2017-11-18 12:08:39.6061 notauth:: Info Generating Data information in 3000 chunks 
+2017-11-18 12:08:39.6061 notauth:: Info Getting file connection string 
+2017-11-18 12:08:39.6612 notauth:: Warn Number of Empty Rows ignored 1 
+2017-11-18 12:08:39.6612 notauth:: Info Bulk Insert into Mongo DB 
+2017-11-18 12:08:39.6963 notauth:: Debug RunTime 00:00:00.08 
+2017-11-18 12:08:39.6963 notauth:: Info Completed Processing file D:\personal\Itanta\staging\Test-302.xls 
+2017-11-18 12:08:39.6993 notauth:: Info File Monitor Service : 11/18/2017 12:08:39 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:08:39.6993 notauth:: Info File Monitor Service : 11/18/2017 12:08:39 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:08:39.6993 notauth:: Info File Monitor Service : 11/18/2017 12:08:39 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:08:39.6993 notauth:: Info File Monitor Service : 11/18/2017 12:08:39 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Changed 
+2017-11-18 12:08:39.6993 notauth:: Info File Monitor Service : 11/18/2017 12:08:39 PM: File D:\personal\Itanta\ExcelData\Test-302.xls | Deleted 
+2017-11-18 12:09:22.9159 notauth:: Info Stopping the Server 

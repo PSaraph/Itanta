@@ -1,0 +1,78 @@
+﻿Installing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Installing service ItantaProcessor...
+Service ItantaProcessor has been successfully installed.
+Creating EventLog source ItantaProcessor in log Application...
+Committing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Uninstalling assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Removing EventLog source ItantaProcessor.
+Service ItantaProcessor is being removed from the system...
+Service ItantaProcessor was successfully removed from the system.
+Installing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Installing service ItantaProcessor...
+Service ItantaProcessor has been successfully installed.
+Creating EventLog source ItantaProcessor in log Application...
+Committing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Uninstalling assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Removing EventLog source ItantaProcessor.
+Service ItantaProcessor is being removed from the system...
+Service ItantaProcessor was successfully removed from the system.
+Installing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Installing service ItantaProcessor...
+Service ItantaProcessor has been successfully installed.
+Creating EventLog source ItantaProcessor in log Application...
+Committing assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Uninstalling assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+Removing EventLog source ItantaProcessor.
+Service ItantaProcessor is being removed from the system...
+Service ItantaProcessor was successfully removed from the system.
+Uninstalling assembly 'D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.InstallLog
+   assemblypath = D:\personal\Itanta\ItantProcessor_corrected\ItantaProcessor\bin\x86\Debug\ItantProcessor.exe
+An exception occurred in the OnBeforeUninstall event handler of ItantProcessor.ProjectInstaller.
+System.InvalidOperationException: Service ItantaProcessor was not found on computer '.'.
+The inner exception System.ComponentModel.Win32Exception was thrown with the following error message: The specified service does not exist as an installed service.
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
+Removing EventLog source ItantaProcessor.
+Warning: The source ItantaProcessor is not registered on the local machine.
+Service ItantaProcessor is being removed from the system...
+An exception occurred during the uninstallation of the System.ServiceProcess.ServiceInstaller installer.
+System.ComponentModel.Win32Exception: The specified service does not exist as an installed service
+An exception occurred while uninstalling. This exception will be ignored and the uninstall will continue. However, the application might not be fully uninstalled after the uninstall is complete.
