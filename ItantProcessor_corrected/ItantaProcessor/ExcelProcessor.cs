@@ -57,7 +57,14 @@ namespace ItantProcessor
                 LOGGER.Info("Completed Processing file {0}", strFileName);
                 if(File.Exists(strFileName))
                 {
-                    File.Delete(strFileName);
+                    try
+                    {
+                        File.Delete(strFileName);
+                    }
+                    catch(Exception ex)
+                    {
+                        LOGGER.Warn("{0}", ex.ToString());
+                    }
                 }
                 SetReturnStatus(true);
             }

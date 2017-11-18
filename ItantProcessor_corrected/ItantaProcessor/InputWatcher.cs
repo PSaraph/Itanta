@@ -47,7 +47,7 @@ namespace ItantProcessor
         {
             // Put all txt files into array.
             // this is the new moved directory now
-            string strStagingDir = Directory.GetParent(Path.GetDirectoryName(strBaseFileName)) + "\\staging";
+            string strStagingDir = GetMetaDir() + "\\staging";
             string[] arrayFilePaths = Directory.GetFiles(strStagingDir);
             foreach (string strFileName in arrayFilePaths)
             {
@@ -274,10 +274,57 @@ namespace ItantProcessor
             return bRetCode;
         }
 
+        private static string GetMetaDir()
+        {
+            if (string.IsNullOrEmpty(mStrMetaDir))
+            {
+                bool IsProcess64Bit = Platforms.CPlatformUtils.IsProcess64Bit();
+                bool IsPlatform64Bit = Platforms.CPlatformUtils.IsOperatingSystem64Bit();
+
+                ///cases
+                ///If OS is 64 bit and Process is 32 bit then it will use wow6432
+                ///If OS is 64 bit and Process is also 64 bit then it will use normal regisrty
+                ///
+
+                string strRegKey = @"Software\\Itanta";
+                RegistryKey localKey = null;
+                if ((!IsProcess64Bit && IsPlatform64Bit) || (!IsPlatform64Bit))
+                {
+                    localKey =
+                        RegistryKey.OpenBaseKey(RegistryHive.LocalMachine,
+                        RegistryView.Registry32);
+                }
+                else
+                {
+                    localKey =
+                        RegistryKey.OpenBaseKey(RegistryHive.LocalMachine,
+                        RegistryView.Registry64);
+                }
+
+                using (RegistryKey key = localKey.OpenSubKey(strRegKey))
+                {
+                    if (key != null)
+                    {
+                        Object objMetaDataDir = key.GetValue("metadir");
+                        if (objMetaDataDir != null)
+                        {
+                            mStrMetaDir = objMetaDataDir.ToString();
+                        }
+                    }
+                }
+                localKey.Dispose();
+                if (!Directory.Exists(mStrMetaDir))
+                {
+                    Directory.CreateDirectory(mStrMetaDir);
+                }
+            }
+            return mStrMetaDir;
+        }
+
         private static string MoveToStaging(string strFileName)
         {
             string strNewFileName = string.Empty;
-            string strPath = Directory.GetParent(Path.GetDirectoryName(strFileName)) + "\\staging";
+            string strPath = GetMetaDir() + "\\staging";
             if (!Directory.Exists(strPath))
             {
                 Directory.CreateDirectory(strPath);
@@ -292,7 +339,15 @@ namespace ItantProcessor
                         File.Delete(strNewFileName);
                     }
                     LOGGER.Info("Moving File {0} to Staging", strFileName);
-                    File.Move(strFileName, strNewFileName);
+                    try
+                    {
+                        File.Move(strFileName, strNewFileName);
+                    }
+                    catch(Exception ex)
+                    {
+                        LOGGER.Warn("{0}", ex.ToString());
+                    }
+                    
                 }
             }
             return strNewFileName;
@@ -385,5 +440,6 @@ namespace ItantProcessor
         private static HashSet<string> mObjProcessingFile = new HashSet<string>();
         private static Logger LOGGER = LogManager.GetCurrentClassLogger();
         private UserMetaData mObjMetaData = null;
+        private static string mStrMetaDir = string.Empty;
     }
 }
