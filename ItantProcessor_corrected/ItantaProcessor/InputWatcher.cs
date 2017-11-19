@@ -106,7 +106,7 @@ namespace ItantProcessor
                                        e.FullPath, e.ChangeType);
             lock (this)
             {
-                if (mObjProcessingFile.Contains(e.FullPath))
+                if (FileRecordKeeper.Instance.HasFile(Path.GetFileName(e.FullPath)) )
                 {
                     LOGGER.Warn("File already is being processed");
                     return;
@@ -115,7 +115,7 @@ namespace ItantProcessor
                 {
                     LOGGER.Info("Proceeding with Processing of File {0}",
                         e.FullPath);
-                    mObjProcessingFile.Add(e.FullPath);
+                    FileRecordKeeper.Instance.AddFileName(Path.GetFileName(e.FullPath));
                 }
             }
             
@@ -137,7 +137,7 @@ namespace ItantProcessor
                     {
                         if(iCount % 50 == 0)
                         {
-                            LogEvent("File is still being copied");
+                            LogEvent("Copying File");
                         }
                         
                         stopWatch.Stop();
@@ -161,7 +161,10 @@ namespace ItantProcessor
                     if (!bIgnoreFile)
                     {
                         DoProcessing(e.FullPath);
-                        mObjProcessingFile.Remove(e.FullPath);
+                    }
+                    else
+                    {
+                        FileRecordKeeper.Instance.RemoveFileName(Path.GetFileName(e.FullPath));
                     }
                 }
             }
@@ -341,9 +344,12 @@ namespace ItantProcessor
                     LOGGER.Info("Moving File {0} to Staging", strFileName);
                     try
                     {
-                        File.Move(strFileName, strNewFileName);
+                        if(File.Exists(strFileName))
+                        {
+                            File.Move(strFileName, strNewFileName);
+                        }
                     }
-                    catch(Exception ex)
+                    catch(FileNotFoundException ex)
                     {
                         LOGGER.Warn("{0}", ex.ToString());
                     }

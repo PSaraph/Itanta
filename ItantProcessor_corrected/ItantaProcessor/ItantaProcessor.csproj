@@ -128,6 +128,7 @@
     <Compile Include="DBTimerProcessor.cs" />
     <Compile Include="ExcelProcessor.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="FileRecordKeeper.cs" />
     <Compile Include="IDataManager.cs" />
     <Compile Include="InputWatcher.cs" />
     <Compile Include="IProcessor.cs" />

@@ -67,6 +67,7 @@ namespace ItantProcessor
                     }
                 }
                 SetReturnStatus(true);
+                FileRecordKeeper.Instance.RemoveFileName(Path.GetFileName(strFileName));
             }
             strAdditionalData = mStrRetData;
         }

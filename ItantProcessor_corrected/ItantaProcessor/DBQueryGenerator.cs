@@ -360,8 +360,8 @@ namespace ItantProcessor
                         {
                             m_strJoinClause += "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "] >= [" +
                                 strTableAlias + "].[" + mStrStartColumn + "] AND [" +
-                                strMainTableAlias + "].[" + m_strSortOrderCol + "] < [" +
-                                strTableAlias + "].[" + mStrEndColumn + "] AND ";
+                                strMainTableAlias + "].[" + m_strSortOrderCol + "] < ISNULL( NULLIF([" +
+                                strTableAlias + "].[" + mStrEndColumn + "],''),'31-12-9999 23:59:59' ) AND ";
 
                         }
                         strQuery += "[" + strTableAlias + "].[" + strColName + "], ";
