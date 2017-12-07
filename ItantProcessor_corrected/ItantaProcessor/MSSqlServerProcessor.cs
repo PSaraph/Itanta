@@ -18,6 +18,7 @@ using Microsoft.Win32;
 using System.IO;
 using NLog;
 using DataManager;
+using System.Text;
 
 namespace ItantProcessor
 {
@@ -150,6 +151,7 @@ namespace ItantProcessor
                 }
             }
             localKey.Dispose();
+            LOGGER.Info("Get Connection string returning {0}", strConnectionString);
             return strConnectionString;
         }
 
@@ -306,6 +308,7 @@ namespace ItantProcessor
                 long iLastDbFetchCount = DBSerializer.DBGetCount().GetAwaiter().GetResult();
                 objQueryGenerator.SetLastFetchedRow(iLastDbFetchCount.ToString());
                 objQueryGenerator.SetSortingColumn(GetQuerySortColumn(strMetaDataId));
+                objQueryGenerator.SetColNameDataTypeMap(mObjColNameDataTypeMap);
             }
 
             UserMetaData objMetaData = CMetaDataManager.Instance.GetMetaDataFromId(strMetaDataId);
@@ -325,7 +328,7 @@ namespace ItantProcessor
         {
             m_objProcessJSONQueue = new BufferBlock<List<Dictionary<string, object>>>(new DataflowBlockOptions { BoundedCapacity = 5, });
             int chunkSize = 5000;
-            LOGGER.Info("Serializing data to Mongo with Chunk of {0} records", chunkSize);
+            LOGGER.Info("Number: {0} of records for serialization", chunkSize);
             var block = new ActionBlock<List<Dictionary<string, object>>>(
                             data =>
                             {
@@ -422,31 +425,57 @@ namespace ItantProcessor
 
         private async Task ReadFirstRow()
         {
-            LOGGER.Info("Reading data for Meta Column population");
+            LOGGER.Info("Reading data for Meta Column population with connection string {0}", m_StrConnectionstring);
             using (var sqlConnection = new SqlConnection(m_StrConnectionstring))
             {
-                await sqlConnection.OpenAsync();
-                using (var sqlCommand = new SqlCommand())
+                try
                 {
-                    sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandType = CommandType.Text;
-                    sqlCommand.CommandTimeout = 180;
-                    sqlCommand.CommandText = GetDBQuery();
-                    Console.WriteLine(sqlCommand.CommandText);
-                    using (var sqlReader = await sqlCommand.ExecuteReaderAsync())
+                    await sqlConnection.OpenAsync();
+                    using (var sqlCommand = new SqlCommand())
                     {
-                        var columns = new List<string>();
-                        for (var i = 0; i < sqlReader.FieldCount; i++)
+                        LOGGER.Debug("ReadFirstRow: Connection is Open");
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandTimeout = 180;
+                        sqlCommand.CommandText = GetDBQuery();
+                        Console.WriteLine(sqlCommand.CommandText);
+                        using (var sqlReader = await sqlCommand.ExecuteReaderAsync())
                         {
-                            columns.Add(sqlReader.GetName(i));
-                        }
+                            LOGGER.Debug("ReadFirstRow: Execution is Success");
+                            var columns = new List<string>();
+                            for (var i = 0; i < sqlReader.FieldCount; i++)
+                            {
+                                columns.Add(sqlReader.GetName(i));
+                            }
 
-                        while (await sqlReader.ReadAsync())
-                        {
-                            m_ObjMetaStructure.AddColData(columns.ToDictionary(column => column, column => sqlReader[column]));
-                            break;
+                            while (await sqlReader.ReadAsync())
+                            {
+                                m_ObjMetaStructure.AddColData(columns.ToDictionary(column => column, column => sqlReader[column]));
+                                break;
+                            }
                         }
                     }
+                }
+                catch (SqlException ex)
+                {
+                    StringBuilder errorMessages = new StringBuilder();
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" +
+                            "Message: " + ex.Errors[i].Message + "\n" +
+                            "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                            "Source: " + ex.Errors[i].Source + "\n" +
+                            "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    LOGGER.Error(errorMessages.ToString());
+                }
+                catch (Exception ex)
+                {
+                    LOGGER.Error(ex.ToString());
+                }
+                finally
+                {
+                    sqlConnection.Close();
                 }
             }
             //m_ObjMetaStructure.AddColData("UNAME", m_CollQueryStringParameters.GetValues("UserName").ElementAt(0));
@@ -471,51 +500,76 @@ namespace ItantProcessor
 
         public async Task FillTableAsync(int iChunkSize)
         {
-            LOGGER.Info("Reading data for Data population");
+            LOGGER.Info("Reading data for Data population with connection string {0}", m_StrConnectionstring);
             using (var sqlConnection = new SqlConnection(m_StrConnectionstring))
             {
-                await sqlConnection.OpenAsync();
-
-                using (var sqlCommand = new SqlCommand())
+                try
                 {
-                    sqlCommand.Connection = sqlConnection;
-                    sqlCommand.CommandType = CommandType.Text;
-                    sqlCommand.CommandTimeout = 180;
-                    sqlCommand.CommandText = GetDBQuery();
-                    Console.WriteLine(sqlCommand.CommandText);
-                    using (var sqlReader = await sqlCommand.ExecuteReaderAsync())
+                    await sqlConnection.OpenAsync();
+                    using (var sqlCommand = new SqlCommand())
                     {
-                        var columns = new List<string>();
-                        var rows = new List<Dictionary<string, object>>();
-                        
-                        for (var i = 1; i < sqlReader.FieldCount; i++)
+                        LOGGER.Debug("FillTableAsync: Connection is Open");
+                        sqlCommand.Connection = sqlConnection;
+                        sqlCommand.CommandType = CommandType.Text;
+                        sqlCommand.CommandTimeout = 180;
+                        sqlCommand.CommandText = GetDBQuery();
+                        Console.WriteLine(sqlCommand.CommandText);
+                        using (var sqlReader = await sqlCommand.ExecuteReaderAsync())
                         {
-                            columns.Add(sqlReader.GetName(i));
-                        }
+                            LOGGER.Debug("FillTableAsync: Exectuion is Success");
+                            var columns = new List<string>();
+                            var rows = new List<Dictionary<string, object>>();
 
-                        int iCount = 0;
-                        while (await sqlReader.ReadAsync())
-                        {
-                            rows.Add(columns.ToDictionary(column => column.Replace("$", "").Replace(".", ""), column => (sqlReader[column] == DBNull.Value) ? string.Empty as object : sqlReader[column]));
-                     //       rows.Add(columns.ToDictionary(column => column, column => sqlReader[column]));
-                            if (rows.Count > 0 && (rows.Count % iChunkSize == 0))
+                            for (var i = 1; i < sqlReader.FieldCount; i++)
                             {
-                                Console.WriteLine(iCount);
+                                columns.Add(sqlReader.GetName(i));
+                            }
+
+                            int iCount = 0;
+                            while (await sqlReader.ReadAsync())
+                            {
+                                rows.Add(columns.ToDictionary(column => column.Replace("$", "").Replace(".", ""), column => (sqlReader[column] == DBNull.Value) ? string.Empty as object : sqlReader[column]));
+                                //       rows.Add(columns.ToDictionary(column => column, column => sqlReader[column]));
+                                if (rows.Count > 0 && (rows.Count % iChunkSize == 0))
+                                {
+                                    Console.WriteLine(iCount);
+                                    await m_objProcessJSONQueue.SendAsync(rows);
+                                    rows = null;
+                                    rows = new List<Dictionary<string, object>>();
+                                }
+                                ++iCount;
+                            }
+
+                            if (rows.Count > 0)
+                            {
                                 await m_objProcessJSONQueue.SendAsync(rows);
                                 rows = null;
-                                rows = new List<Dictionary<string, object>>();
                             }
-                            ++iCount;
+                            Console.WriteLine(iCount);
+                            m_objProcessJSONQueue.Complete();
                         }
-
-                        if(rows.Count > 0)
-                        {
-                            await m_objProcessJSONQueue.SendAsync(rows);
-                            rows = null;
-                        }
-                        Console.WriteLine(iCount);
-                        m_objProcessJSONQueue.Complete();
                     }
+                }
+                catch (SqlException ex)
+                {
+                    StringBuilder errorMessages = new StringBuilder();
+                    for (int i = 0; i < ex.Errors.Count; i++)
+                    {
+                        errorMessages.Append("Index #" + i + "\n" +
+                            "Message: " + ex.Errors[i].Message + "\n" +
+                            "LineNumber: " + ex.Errors[i].LineNumber + "\n" +
+                            "Source: " + ex.Errors[i].Source + "\n" +
+                            "Procedure: " + ex.Errors[i].Procedure + "\n");
+                    }
+                    LOGGER.Error(errorMessages.ToString());
+                }
+                catch (Exception ex)
+                {
+                    LOGGER.Error(ex.ToString());
+                }
+                finally
+                {
+                    sqlConnection.Close();
                 }
             }
         }

@@ -40,5 +40,10 @@ namespace ItantProcessor
         {
 
         }
+
+        private void ItantaProcessor_AfterInstall(object sender, InstallEventArgs e)
+        {
+
+        }
     }
 }

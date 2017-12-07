@@ -49,6 +49,13 @@ namespace ItantProcessor
                         {
                             if (objColData.ContainsKey(datafield.Key))
                             {
+                                string strDataFldVal = Convert.ToString(datafield.Value);
+                                if (String.IsNullOrEmpty(strDataFldVal) || string.IsNullOrWhiteSpace(strDataFldVal))
+                                {
+                                    m_objDateTimeIndexes.Add(datafield.Key); //Add this we need to filter this out later
+                                    newFields.Add(datafield.Key, new object());
+                                    continue;
+                                }
                                 bIsToAddEP = true;
                             }
                             else
@@ -70,15 +77,15 @@ namespace ItantProcessor
                         DateTime obj = new DateTime();
                         if (DetermineCorrectDate(strValue, ref obj))
                         {
-//                            DetermineCorrectDate(strValue,ref  obj);
+                            //                            DetermineCorrectDate(strValue,ref  obj);
                             //DateTime obj = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond, DateTimeKind.Utc);
                             m_objDateTimesToModify.Add(datafield.Key, obj);
-                            //object ObjVal = Convert.ToInt32((obj - epoch).TotalSeconds);
+                            //object ObjVal = Convert.ToInt64((obj - epoch).TotalSeconds);
                             //object t = obj.ToUniversalTime();
                             //object t1 = obj.ToUniversalTime() - epoch;
-                            object ObjVal = Convert.ToInt32(Math.Floor((obj.ToUniversalTime() - epoch).TotalSeconds) 
+                            object ObjVal = Convert.ToInt64(Math.Floor((obj.ToUniversalTime() - epoch).TotalSeconds)
                                 - TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).TotalSeconds);
-                            //object ObjVal = Convert.ToInt32(obj.ToUniversalTime());
+                            //object ObjVal = Convert.ToInt64(obj.ToUniversalTime());
                             newFields.Add(datafield.Key + "_EP", ObjVal);
                             m_objDateTimeIndexes.Add(datafield.Key);
                         }
@@ -88,7 +95,7 @@ namespace ItantProcessor
                             //as the user feels that this is time.
                             if (bIsToAddEP)
                             {
-                                object ObjVal = Convert.ToInt32(strValue);
+                                object ObjVal = Convert.ToInt64(strValue);
                                 newFields.Add(datafield.Key + "_EP", ObjVal);
                                 m_objUserDataIndexes.Add(datafield.Key);
                             }
@@ -101,30 +108,40 @@ namespace ItantProcessor
                     {
                         if (dataRow.ContainsKey(strFieldName))
                         {
-                            string strValue =
-                                Regex.Replace(Convert.ToString((dataRow[strFieldName])), @"\s+", " ", RegexOptions.Multiline);
-                           if ( DateTime.TryParseExact(strValue, formats,
-                         CultureInfo.InvariantCulture,
-                         DateTimeStyles.AssumeLocal | DateTimeStyles.AllowWhiteSpaces,
-                         out dt) )  
+                            string strDataFldVal = Convert.ToString(dataRow[strFieldName]);
+                            if (String.IsNullOrEmpty(strDataFldVal) || string.IsNullOrWhiteSpace(strDataFldVal))
                             {
-                                DateTime obj = new DateTime();
-                                DetermineCorrectDate(strValue, ref obj);
-                                //DateTime obj = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond, DateTimeKind.Utc);
-                                m_objDateTimesToModify.Add(strFieldName, obj);
-                                //object t = obj.ToUniversalTime();
-                                //object t1 = obj.ToUniversalTime() - epoch;
-
-                                object ObjVal = Convert.ToInt32(
-                                    Math.Floor((obj.ToUniversalTime() - epoch).TotalSeconds) 
-                                    - TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).TotalSeconds);
-                                //object ObjVal = Convert.ToInt32(obj.ToUniversalTime());
-                                newFields.Add(strFieldName + "_EP", ObjVal);
+                                newFields.Add(strFieldName, new object());
+                                continue;
                             }
                             else
                             {
-                                //If this comes we have some data that is objectionable.
-                                LOGGER.Warn("Failed converting date time value {0}", dataRow[strFieldName]);
+                                string strValue =
+                                Regex.Replace(strDataFldVal, @"\s+", " ", RegexOptions.Multiline);
+
+                                if (DateTime.TryParseExact(strValue, formats,
+                                                            CultureInfo.InvariantCulture,
+                                                            DateTimeStyles.AssumeLocal | DateTimeStyles.AllowWhiteSpaces,
+                                                            out dt))
+                                {
+                                    DateTime obj = new DateTime();
+                                    DetermineCorrectDate(strValue, ref obj);
+                                    //DateTime obj = new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Millisecond, DateTimeKind.Utc);
+                                    m_objDateTimesToModify.Add(strFieldName, obj);
+                                    //object t = obj.ToUniversalTime();
+                                    //object t1 = obj.ToUniversalTime() - epoch;
+
+                                    object ObjVal = Convert.ToInt64(
+                                        Math.Floor((obj.ToUniversalTime() - epoch).TotalSeconds)
+                                        - TimeZoneInfo.Local.GetUtcOffset(DateTime.Now).TotalSeconds);
+                                    //object ObjVal = Convert.ToInt64(obj.ToUniversalTime());
+                                    newFields.Add(strFieldName + "_EP", ObjVal);
+                                }
+                                else
+                                {
+                                    //If this comes we have some data that is objectionable.
+                                    LOGGER.Warn("Failed converting date time value {0}", dataRow[strFieldName]);
+                                }
                             }
                         }
                         else
@@ -134,10 +151,11 @@ namespace ItantProcessor
                         }
                     }
 
+                    //This is taken care of above...!!
                     foreach (string strUserModFld in m_objUserDataIndexes)
                     {
                         object ObjVal =
-                            Convert.ToInt32(Regex.Replace(Convert.ToString((dataRow[strUserModFld])), @"\s+", " ", RegexOptions.Multiline));
+                            Convert.ToInt64(Regex.Replace(Convert.ToString((dataRow[strUserModFld])), @"\s+", " ", RegexOptions.Multiline));
                         newFields.Add(strUserModFld + "_EP", ObjVal);
                     }
                 }
@@ -164,6 +182,7 @@ namespace ItantProcessor
                 return null;
             }
         }
+
 
         private static bool DetermineCorrectDate(string strDateTime, ref DateTime objFinalDtTm)
         {

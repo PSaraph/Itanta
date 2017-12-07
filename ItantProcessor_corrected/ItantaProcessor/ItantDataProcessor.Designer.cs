@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+            
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -15,6 +15,7 @@
         {
             if (disposing && (components != null))
             {
+                mServerProcessor.Dispose();
                 components.Dispose();
             }
             base.Dispose(disposing);

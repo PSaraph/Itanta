@@ -190,6 +190,10 @@ namespace ItantProcessor
             mStrEndColumn = strEndColumn;
         }
 
+        public void SetColNameDataTypeMap(Dictionary<string, string> objColNameTypeMap)
+        {
+            mObjColNameDataTypeMap = objColNameTypeMap;
+        }
         //public string GetDBQuery()
         //{
         //    LOGGER.Info("Getting the Forumlated DB Query");
@@ -263,7 +267,9 @@ namespace ItantProcessor
             }
             if (!m_bSetQueryModeMetaData)
             {
-                strMainQuery = "SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY [" + strMainTableAlias + "].[" + m_strSortOrderCol + "]) AS ITANTAROWCOUNT," + strMainQuery;
+                strMainQuery = "SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY " +
+                    "CONCAT(CONVERT(VARCHAR(10), CONVERT(date,[" + strMainTableAlias + "].[" + m_strSortOrderCol + "],105), 23) ,' ', right(CONVERT(VARCHAR(32), " +
+                    "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "], 108),8)) ) AS ITANTAROWCOUNT," + strMainQuery;
             }
             else
             {
@@ -272,12 +278,16 @@ namespace ItantProcessor
             strMainQuery = strMainQuery.Remove(strMainQuery.LastIndexOf(","), 1);
             if(!string.IsNullOrEmpty(m_strJoinClause))
             {
+
                 m_strJoinClause = m_strJoinClause.Remove(m_strJoinClause.LastIndexOf("AND"), 3);
             }
 
             if (!string.IsNullOrEmpty(m_strTableClause))
             {
-                m_strTableClause = m_strTableClause.Remove(m_strTableClause.LastIndexOf(","), 1);
+                if (mObjMatchColumnList.Count <= 0)
+                {
+                    m_strTableClause = m_strTableClause.Remove(m_strTableClause.LastIndexOf(","), 1);
+                }
             }
             else
             {
@@ -299,6 +309,60 @@ namespace ItantProcessor
             return strMainQuery;
         }
         
+        private string GenerateTempSecondaryTable(DBMetaData objMetadata, string strSecondaryTableName,
+            string strTableAlias)
+        {
+            string strTableQuery = "( select ";
+            List<string> objTableColNamesList = null;
+            objTableColNamesList = objMetadata.GetTableColumns(strSecondaryTableName).ToList();
+            foreach ( string strCol in objTableColNamesList)
+            {
+                if(mStrEndColumn == strCol)
+                {
+                    strTableQuery += " max(ISNULL( NULLIF([" + strCol + "],''),'31-12-9999 23:59:59'))" + strCol + ",";
+                }
+                else
+                {
+                    string strValue = string.Empty;
+                    mObjColNameDataTypeMap.TryGetValue(strCol, out strValue);
+                    if(!string.IsNullOrEmpty(strValue))
+                    {
+                        if(strValue == "time")
+                        {
+                            strTableQuery += " max(ISNULL( NULLIF([" + strCol + "],''),'31-12-9999 23:59:59'))" + strCol + ",";
+                        }
+                        else
+                        {
+                            strTableQuery += " max([" + strCol + "])" + strCol + ",";
+                        }
+                    }
+                    else
+                    {
+                        strTableQuery += " max([" + strCol + "])" + strCol + ",";
+                    }
+                }
+            }
+            strTableQuery = strTableQuery.Remove(strTableQuery.LastIndexOf(","), 1);
+            strTableQuery += " FROM " + strSecondaryTableName + " where "; 
+            if(mObjMatchColumnList.Count > 0)
+            {
+                foreach (string strColName in mObjMatchColumnList)
+                {
+                    strTableQuery += "NULLIF([" + strColName + "],'') is not NULL AND "; 
+                }
+                strTableQuery = strTableQuery.Remove(strTableQuery.LastIndexOf("AND"), 3);
+
+                strTableQuery += " group by ";
+                foreach (string strColName in mObjMatchColumnList)
+                {
+                    strTableQuery += strColName + ",";
+                }
+                strTableQuery = strTableQuery.Remove(strTableQuery.LastIndexOf(","), 1);
+            }
+            strTableQuery += ") AS " + strTableAlias;
+            return strTableQuery;
+        }
+
         private string GenerateCommonPartsOfQuery(DBMetaData objMetadata,
             List<string> objMainTableColNamesList,string strMainTableAlias, string strMainTable)
         {
@@ -312,7 +376,8 @@ namespace ItantProcessor
                     strTableAlias = strTableName + "_A";
                     List<string> objTableColNamesList = null;
                     objTableColNamesList = objMetadata.GetTableColumns(strTableName).ToList();
-                    strQuery += GenerateCommonColNames(objMainTableColNamesList, objTableColNamesList,
+                    strQuery += GenerateCommonColNames(objMetadata,
+                        objMainTableColNamesList, objTableColNamesList,
                         strMainTableAlias, strTableAlias, strMainTable, strTableName);
                 }
             }
@@ -327,7 +392,7 @@ namespace ItantProcessor
 
                         List<string> objTableColNamesList = null;
                         objTableColNamesList = objMetadata.GetTableColumns(strTableName).ToList();
-                        strQuery += GenerateCommonColNames(objMainTableColNamesList, objTableColNamesList,
+                        strQuery += GenerateCommonColNames(objMetadata,objMainTableColNamesList, objTableColNamesList,
                             strMainTableAlias, strTableAlias, strMainTable, strTableName);
                     }
                 }
@@ -336,7 +401,8 @@ namespace ItantProcessor
 
         }
         
-        public string GenerateCommonColNames(List<string> objMainTableColsList, List<string> objTableColsList,
+        public string GenerateCommonColNames(DBMetaData objMetaData,
+            List<string> objMainTableColsList, List<string> objTableColsList,
             string strMainTableAlias,string strTableAlias,string strMainTable,string strTable)
         {
             LOGGER.Info("Getting Common column names for Query across tables");
@@ -358,10 +424,23 @@ namespace ItantProcessor
                             (!string.IsNullOrEmpty(mStrStartColumn)) &&
                             (!string.IsNullOrEmpty(mStrEndColumn)))
                         {
-                            m_strJoinClause += "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "] >= [" +
-                                strTableAlias + "].[" + mStrStartColumn + "] AND [" +
-                                strMainTableAlias + "].[" + m_strSortOrderCol + "] < ISNULL( NULLIF([" +
-                                strTableAlias + "].[" + mStrEndColumn + "],''),'31-12-9999 23:59:59' ) AND ";
+
+                            m_strJoinClause += "(CONCAT(CONVERT(VARCHAR(10), CONVERT(date,[" + strMainTableAlias + "].[" + m_strSortOrderCol + "],105), 23) ,' ', right(CONVERT(VARCHAR(32), " +
+                    "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "], 108),8))) >= ";
+
+                            m_strJoinClause += "(CONCAT(CONVERT(VARCHAR(10), CONVERT(date,[" + strTableAlias + "].[" + mStrStartColumn + "],105), 23) ,' ', right(CONVERT(VARCHAR(32), " +
+                    "[" + strTableAlias + "].[" + mStrStartColumn + "], 108),8))) AND ";
+
+                            m_strJoinClause += "(CONCAT(CONVERT(VARCHAR(10), CONVERT(date,[" + strMainTableAlias + "].[" + m_strSortOrderCol + "],105), 23) ,' ', right(CONVERT(VARCHAR(32), " +
+                   "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "], 108),8))) < ";
+
+                            m_strJoinClause += "(CONCAT(CONVERT(VARCHAR(10), CONVERT(date,[" + strTableAlias + "].[" + mStrEndColumn + "],105), 23) ,' ', right(CONVERT(VARCHAR(32), " +
+                   "[" + strTableAlias + "].[" + mStrEndColumn + "], 108),8))) AND ";
+
+                            //m_strJoinClause += "[" + strMainTableAlias + "].[" + m_strSortOrderCol + "] >= [" +
+                            //    strTableAlias + "].[" + mStrStartColumn + "] AND [" +
+                            //    strMainTableAlias + "].[" + m_strSortOrderCol + "] < [" +
+                            //    strTableAlias + "].[" + mStrEndColumn + "] AND ";
 
                         }
                         strQuery += "[" + strTableAlias + "].[" + strColName + "], ";
@@ -395,7 +474,14 @@ namespace ItantProcessor
                 {
                     m_strTableClause = strMainTable + " " + strMainTableAlias + " , ";
                 }
-                m_strTableClause += strTable + " " + strTableAlias + ",";
+                if (mObjMatchColumnList.Count > 0)
+                {
+                    m_strTableClause += GenerateTempSecondaryTable(objMetaData, strTable, strTableAlias);
+                }
+                else
+                {
+                    m_strTableClause += strTable + " " + strTableAlias + ",";
+                }
             }
             return strQuery;
         }
@@ -425,6 +511,7 @@ namespace ItantProcessor
         private Dictionary<string, string> m_DBNameQueryMap = new Dictionary<string, string>();
         private Dictionary<string, DBMetaData> m_ObjDBDataMap = new Dictionary<string, DBMetaData>();
         private Dictionary<string, string> m_DBMainTableMap = new Dictionary<string, string>();
+        private Dictionary<string, string> mObjColNameDataTypeMap = new Dictionary<string, string>();
         private string m_strJoinClause = string.Empty;
         private string m_strTableClause = string.Empty;
         private string m_strCurrentConnStr = string.Empty;

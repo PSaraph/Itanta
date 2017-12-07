@@ -38,9 +38,10 @@ namespace ItantProcessor
             // 
             // ItantaProcessor
             // 
+            ItantaProcessor.DelayedAutoStart = true;
             ItantaProcessor.ServiceName = "ItantaProcessor";
             ItantaProcessor.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
-            ItantaProcessor.DelayedAutoStart = true;
+            ItantaProcessor.AfterInstall += new System.Configuration.Install.InstallEventHandler(this.ItantaProcessor_AfterInstall);
             // 
             // serviceProcessInstaller1
             // 
